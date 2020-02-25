@@ -27,7 +27,7 @@ hardware server configurations with an overlaying virtual network.  Once the top
 
 NodePrime® delivers is an advanced inventory and analytic platform for heterogeneous, multi-vendor, multi-generational of IT infrastructure, networks and any x86/ARM servers.  It enables IT managers, operators to quickly discover datacenter assets, aggregate the inventory data and present them on an single dashboard to provide quick search, filter to operate datacenter more intelligently.  In addition, it also collect metrics, syslog to help the operator to perform preventative analysis.  
 
-![Figure 1. NodePrime detail inventory dashboard](../images/dashboard.png)  
+![Figure 1. NodePrime detail inventory dashboard](https://github.com/ironfugu/np_docs/blob/master/images/dashboard.png)  
 
 
 **Key Benefits**   
@@ -60,7 +60,7 @@ NodePrime boosts datacenter performance by:
 NodePrime® platform is an an integrated solution designed to provide a full life cycle management and automation for hyper-scale datacenter.   It enables IT managers, operators to efficiently deploy, provision bare metals from dock to OS ready across heterogeneous hardware.  In addition, it performs many of the today and tomorrow operations in automated fashions at large scale.
 
 
-![Figure 2. Service deployment page](../images/agent-deploy.png)  
+![Figure 2. Service deployment page](https://github.com/ironfugu/np_docs/blob/master/images/agent-deploy.png)  
 
 **Key Benefits**  
 
