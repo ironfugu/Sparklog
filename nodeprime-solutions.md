@@ -16,7 +16,7 @@ hardware server configurations with an overlaying virtual network.  Once the top
 
 
 **Use Cases** 
-![Figure 1.  Virtual Datacenter use-cases](../images/simDC-usecase.png)  
+![Figure 1.  Virtual Datacenter use-cases](https://github.com/ironfugu/np_docs/blob/master/images/simDC-usecase.png)
 
   
 
