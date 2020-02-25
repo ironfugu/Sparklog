@@ -20,14 +20,13 @@ All of the NodePrime platforms are buit to work seamlessly together.
 
 
 ***
-<div id='DATAHUB'/>
 ## DATAHUB
 
 NodePrime **DataHub** is composed of three components that work together to provide distributed storage, data collection and analytics capabilities. 
 
-#### Sparklog
+#### DataHub
 
-![Figure 1. NodePrime DataHub (Sparklog) ](https://github.com/ironfugu/docs/blob/master/images/datahub-io.png)
+![Figure 1. NodePrime DataHub ](https://github.com/ironfugu/docs/blob/master/images/datahub-io.png)
 
 *Sparklog* is an ultra-high performance, distributed datastore capable of ingesting massive amounts of data (over 100 million metrics per second on a commodity x86 server).  Data ingest is prioritized over query optimization.  Query optimization can be optionally enabled as needed on different types of data.
 
