@@ -1,6 +1,6 @@
 # NodePrime Platform Overivew
 
-![Figure 1. NodePrime platform architecture](https://github.com/ironfugu/docs/blob/master/platform-architect.png)
+![Figure 1. NodePrime platform architecture](https://github.com/ironfugu/docs/blob/master/images/platform-architect.png)
 
 NodePrime® is a hyperscale datacenter management platform that provides multi-vendor hardware control, high-speed scalable timeseries data collection and powerful interfaces for datacenter operators and developers. Designed to manage environments ranging from the smallest test lab to a hundred-thousand node datacenter, the platform centers around flexible data models constructed on the fly for any data type - metrics, logs, blob data and key-value store. Components written in Go power NodePrime technology to discover inventory, alert on system log events and track performance metrics and hardware changes over time. Data is written as fast as it is delivered in a format that easily integrates with other databases, languages and tools.
 
@@ -16,7 +16,7 @@ The NodePrime® platform consist of:
 All of the NodePrime platforms are buit to work seamlessly together.  
 
 
-![Figure 2. NodePrime platform in the datacenter ](https://github.com/ironfugu/docs/blob/master/platform-overview.png)
+![Figure 2. NodePrime platform in the datacenter ](https://github.com/ironfugu/docs/blob/master/images/platform-overview.png)
 
 
 ***
@@ -27,11 +27,11 @@ NodePrime **DataHub** is composed of three components that work together to prov
 
 #### Sparklog
 
-![Figure 1. NodePrime DataHub (Sparklog) ](https://github.com/ironfugu/docs/blob/master/datahub-io.png)
+![Figure 1. NodePrime DataHub (Sparklog) ](https://github.com/ironfugu/docs/blob/master/images/datahub-io.png)
 
 *Sparklog* is an ultra-high performance, distributed datastore capable of ingesting massive amounts of data (over 100 million metrics per second on a commodity x86 server).  Data ingest is prioritized over query optimization.  Query optimization can be optionally enabled as needed on different types of data.
 
-![Figure 2. Sparklog data ingestion  ](https://github.com/ironfugu/docs/blob/master/datahub-different-data.png)
+![Figure 2. Sparklog data ingestion  ](https://github.com/ironfugu/docs/blob/master/images/datahub-different-data.png)
 
 *Sparklog* moves beyond the *all-or-nothing* view of data.  Unlike traditional systems which treat all kinds of data the same way, *Sparklog* considers different elemental data types encountered in data centers: Blobs (e.g. inventory), Logs (e.g. syslog), Metrics (e.g. performance data) and Key-Value pairs (e.g. user and configuration information). Different kinds of data are ingested, stored and processed specifically per type, because some data types need less processing overhead than others. For example, metrics incur minimal overhead, while Key-Value pairs may incur more overhead to provide fully transactional I/O. These considerations are key to Sparklog's design.
 
