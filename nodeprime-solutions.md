@@ -1,27 +1,3 @@
-# NodePrime Datacenter Solutions
-
-## Virtual Datacenter **Overview**   
-
-NodePrime virtual datacenter is an industry first
-application to allow the users to build out a simulated
-datacenter in an instant on a laptop that constructs many various
-hardware server configurations with an overlaying virtual network.  Once the topology and servers are constructed, then the users can load and test any applications without any actual hardware.
-
-**Key Benefits**   
-
-*  Simulate topology and server configuration  
-*  Accelerate testing of applications
-*  Accelerate testig of hardware provision, deployment setup
-
-
-
-**Use Cases** 
-![Figure 1.  Virtual Datacenter use-cases](https://github.com/ironfugu/np_docs/blob/master/images/simDC-usecase.png)
-
-  
-
-
-
 ## Inventory and Analytics
 **Overview**    
 
