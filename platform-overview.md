@@ -1,6 +1,6 @@
 # NodePrime Platform Overivew
 
-![Figure 1. NodePrime platform architecture](../images/platform-architect.png)
+![Figure 1. NodePrime platform architecture](https://github.com/ironfugu/docs/blob/master/platform-architect.png)
 
 NodePrime® is a hyperscale datacenter management platform that provides multi-vendor hardware control, high-speed scalable timeseries data collection and powerful interfaces for datacenter operators and developers. Designed to manage environments ranging from the smallest test lab to a hundred-thousand node datacenter, the platform centers around flexible data models constructed on the fly for any data type - metrics, logs, blob data and key-value store. Components written in Go power NodePrime technology to discover inventory, alert on system log events and track performance metrics and hardware changes over time. Data is written as fast as it is delivered in a format that easily integrates with other databases, languages and tools.
 
@@ -16,7 +16,7 @@ The NodePrime® platform consist of:
 All of the NodePrime platforms are buit to work seamlessly together.  
 
 
-![Figure 2. NodePrime platform in the datacenter ](../images/platform-overview.png)
+![Figure 2. NodePrime platform in the datacenter ](https://github.com/ironfugu/docs/blob/master/platform-overview.png)
 
 
 ***
@@ -27,11 +27,11 @@ NodePrime **DataHub** is composed of three components that work together to prov
 
 #### Sparklog
 
-![Figure 1. NodePrime DataHub (Sparklog) ](../images/datahub-io.png)
+![Figure 1. NodePrime DataHub (Sparklog) ](https://github.com/ironfugu/docs/blob/master/datahub-io.png)
 
 *Sparklog* is an ultra-high performance, distributed datastore capable of ingesting massive amounts of data (over 100 million metrics per second on a commodity x86 server).  Data ingest is prioritized over query optimization.  Query optimization can be optionally enabled as needed on different types of data.
 
-![Figure 2. Sparklog data ingestion  ](../images/datahub-different-data.png)
+![Figure 2. Sparklog data ingestion  ](https://github.com/ironfugu/docs/blob/master/datahub-different-data.png)
 
 *Sparklog* moves beyond the *all-or-nothing* view of data.  Unlike traditional systems which treat all kinds of data the same way, *Sparklog* considers different elemental data types encountered in data centers: Blobs (e.g. inventory), Logs (e.g. syslog), Metrics (e.g. performance data) and Key-Value pairs (e.g. user and configuration information). Different kinds of data are ingested, stored and processed specifically per type, because some data types need less processing overhead than others. For example, metrics incur minimal overhead, while Key-Value pairs may incur more overhead to provide fully transactional I/O. These considerations are key to Sparklog's design.
 
@@ -39,7 +39,7 @@ In contrast, other systems such as Hbase, Cassandra, Oracle, PostgreSQL, MySQL, 
 
 Sparklog provides flexible data models, created on the fly, which gives application developers and data scientists options and keeps system administration easy for DevOps. Other distributed solutions end up forcing all types of data over a single-model time-series database on top of HBase, backed by a HDFS cluster, replicated multiple times and perhaps moved into a relational database. These systems often rely on distributed key-value stores that replicate to multipe nodes, fighting for concensus, and frequently reveal the limitations of the centralized service registry model. These approaches are not always the best way.  *Sparklog* treats different data types differently.
 
-![Figure 3. Sparklog views of the data as time series ](../images/datahub-inventory-change.png)
+![Figure 3. Sparklog views of the data as time series ](https://github.com/ironfugu/docs/blob/master/images/datahub-inventory-change.png)
 
 *Sparklog* treats *all* data as timeseries, even key-value and blob types. *Sparklog*'s view is that *Data is incomplete without meta-data*.  One of the most important meta-data is *time*.  The question, *"What is the value of key A?"*, is incomplete and non-sensical, since by the time the query is received or answered, the value of A might have evolved.  Better questions are *"What was the value of key A over a period of time? What was it at a certain point in time?"*  This view of *data and time* as an integral unit of information avoids further complexities arising out of attempts to achieve consensus in distributed environments. Sparklog explicitly exposes API that includes *time*, instead of hiding *time*, as seen in database implementations that attempt to reconcile the loss of the time parameter from their API by implementing MVCC to realize imperfect transactions and consistency.
 
@@ -58,17 +58,17 @@ Sparklog provides flexible data models, created on the fly, which gives applicat
 
 *Primeview* is NodePrime's dashboard, unifying many of NodePrime's high level features under one pane of glass.  It provides datacenter operators with an integrated solution for deploying and managing datacenter hardware. Various analytics modules allow operators to perform compliance and forensic tasks. 
 
-![Figure 4.  Inventory dashboard ](../images/dashboard.png) 
+![Figure 4.  Inventory dashboard ](https://github.com/ironfugu/docs/blob/master/images/dashboard.png) 
 
 The default *dashboard* shows status of all NodePrime services.  There are task oriented work flow designed for typical datacenter use cases.  
 
-![Figure 5. Node detail view](../images/detail-inventory-time.png)
+![Figure 5. Node detail view](https://github.com/ironfugu/docs/blob/master/images/detail-inventory-time.png)
 
 #### Agents
 
 *Sparklog* supports many different kinds of agents which are data collectors. Collecting and sending data is as easy as writing a line of text over the network. The format of data is deliberately made simple, so that even very resource constrained devices can be programmed to send out metrics.
 
-![Figure 6. NodePrime Agent collector configuration](../images/agent-collectors.png)
+![Figure 6. NodePrime Agent collector configuration](https://github.com/ironfugu/docs/blob/master/images/agent-collectors.png)
 
 NodePrime provides a set of user-extensible reference agents and examples.
 
@@ -78,7 +78,7 @@ NodePrime provides a set of user-extensible reference agents and examples.
 <div id='DIRECTIVE'/>
 ## DIRECTIVE
 
-![Figure 7. NodePrime Directive dashboard ](../images/directive-dashboard.png)
+![Figure 7. NodePrime Directive dashboard ](https://github.com/ironfugu/docs/blob/master/images/directive-dashboard.png)
 
 *NodePrime Directive* is a network-level solution for discovering, deploying and managing hundreds and thousands of servers in a datacenter environment. Able to fix network boot problems and deploy in-band firmware upgrades on demand, Directive integrates seamlessly with DataHub to profile your network by collecting inventory and network metrics for later analytics.
 
@@ -106,7 +106,7 @@ Some of the protocols used are: ICMP, ARP, LLDP, SNMP, IPMI
 
 True immutability only exists when the OS, network topology and application deployment strategy are defined in data, as a blueprint, which can be repeated predictably every time. NodePrime Virtual Data Center enables developers and datacenter operators to create an environment for rapid simulation, examining results, changing the parameters of the runtime environment _in blueprint textual representation, like JSON_ and then repeat for comparison.
 
-![Figure 8. NodePrime Vitual Datacenter  ](../images/vdc-overview.png)
+![Figure 8. NodePrime Vitual Datacenter  ](https://github.com/ironfugu/docs/blob/master/images/vdc-overview.png)
 
 #### DevDC
 
@@ -118,6 +118,6 @@ True immutability only exists when the OS, network topology and application depl
 
 *SimDC* is an example UI for the Virtual Data Center.  It allows loading the JSON blueprint of a Data Center and compiles it into a running simulation, which is then visualized and rendered inside a browser.
 
-![Figure 9. NodePrime simDC Use Cases  ](../images/simDC-usecase.png)
+![Figure 9. NodePrime simDC Use Cases  ](https://github.com/ironfugu/docs/blob/master/images/simDC-usecase.png)
 
 
